@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            color: violet;
+            text-indent: 30px;
+            text-transform: capitalize;
+            height: 200px;
+            display: block;
+            margin: 30px;
+            
+        }
+        </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>OMMO.PRETTY</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <nav class="navbar p-3 navbar-expand-lg  border-bottom border-body" style="background-color: #e3f2fd;">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="/"><strong>OMMO.PRETTY</strong></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="/about">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/bookmakeup">Book Makeup</a>
+                          </li>
+                          {% if user.is_authenticated %}
+                          <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                          </li>
+                          {% else %}
+                          <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                          </li>
+                          {% endif %}
+                         
+                          <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown link
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div><!--end of 1st row-->
+
+        <div class="container">
+            <div class="row auto-mx">
+                <div class="col box auto-my">
+                    <h2 style="color: blueviolet; text-transform: capitalize; text-align: center;">Why Choose Ommo.pretty?</h2>
+                    <p style="text-align: justify;">Weddings are all about creating memories with your loved ones. And picture-perfect memories require you to look picture perfect! Who better than the pioneers of beauty in India to help you look perfect on your big day?! That's right! For decades Ommo.pretty has been helping Indian brides in the country look their absolute best on the most important day of their life.When it comes to bridal makeup, Ommo.pretty believes that every bride must feel like a Queen on their big day.we have specially designed and curated looks for keeping in mind the diverse brides of our country. Be it the engagement, mehendi, haldi, cocktail, sangeet or the main wedding, we are here to ensure you put your best face forward and create those picture-perfect memories.<br>
+                        From Bridal makeover to commercial shoots we provide makeover and hairstyling for all. ommo.pretty is known to be very friendly and helpful as we gives personal grooming tips for skin and hair care as well as choosing clients outfits and jewellery. We believe in highlighting or enhancing clients own features with natural makeover and hairstyle. Over the years our makeover solutions have been highly praised and admired for boosting the confidence of clients.   We focus on the quality of service with keeping in mind the current trends of makeovers and hair styles.</p>
+                </div>
+            </div>
+        </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/css/bootstrap.min.css'>
+    
+</head>
+<body>
+   
+
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-sm-4 mx-auto mt-5 shadow">
+                <h2 class="text-center">USER REGISTRARATION</h2> 
+                <form method="post" action="">
+                    {% csrf_token %}
+                <div class="mb-3">
+                    <label for="Inpute2" class="form-label">Email address</label>
+                    <input type="email" class="form-control" name="uname" id="Input2" placeholder="">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="Inpute3" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="upass" id="Input3" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="Inpute3" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="ucpass" id="Input3" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <input type="submit"class="btn btn-primary" value="REGISTER">&nbsp;&nbsp;&nbsp;
+                    Already Registerd?
+                    <a href="/login" style="text-decoration: none;">Login</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </form>
+    
+</body>
+    <script src='static/js/bootstrap.min.js'></script>
+    <script src='static/js/proper.js'></script>
+</html>
